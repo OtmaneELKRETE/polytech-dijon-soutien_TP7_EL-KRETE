@@ -23,6 +23,7 @@ class MasterMind:
         while i<self.code.maxTentative and self.tentative.correct_compteur != self.code.longueur_code:
             self.tentative.propositionJoueur(self.code)
             self.tentative.affichageResutat(self.code,i)
+            i+=1
 
 
 MasterMind().partieMasterMind()
