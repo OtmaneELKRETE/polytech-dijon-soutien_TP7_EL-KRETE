@@ -36,4 +36,4 @@ class Code:
     Affichage du code secret
     """     
     def display(self):
-        print(f"Code: {self.code}")
+        return self.code

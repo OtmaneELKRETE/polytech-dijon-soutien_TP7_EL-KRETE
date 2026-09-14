@@ -55,3 +55,11 @@ class Tentative:
             print(f"il te reste encore {tentative} tentatives")
         else:
             print(f"Félicitations tu as trouvés en {code.maxTentative-tentative} tentatives")
+
+    """
+    Gestion de la défaite en fin de partie
+    """
+    def gestionDéfaite(self,code,nbTentative):
+        if (nbTentative == code.maxTentative and self.correct_compteur != code.longueur_code):
+            print(f"Vous n'avez pas réussi à trouver le code dans le nombre d'essai imparti.")
+            print(f"Voici la solution : {code.display()}")
