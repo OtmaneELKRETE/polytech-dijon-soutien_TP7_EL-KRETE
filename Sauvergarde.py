@@ -19,7 +19,7 @@ class Sauvegarde:
     def ecrireScore(self):
         if self.parties_jouees !=0: 
             self.score = self.parties_gagnees/self.parties_jouees
-        with open("resultats.txt", "w", encoding="utf-8") as fichier:
+        with open(".resultats.txt", "w", encoding="utf-8") as fichier:
             fichier.write(f"Parties jouées: {self.parties_jouees} | Parties gagnées: {self.parties_gagnees} | Score: {self.score}\n")
 
     """
@@ -27,7 +27,7 @@ class Sauvegarde:
     """
     def lireScore(self):
         try:
-            with open("resultats.txt", "r", encoding="utf-8") as fichier:
+            with open(".resultats.txt", "r", encoding="utf-8") as fichier:
                 valeur = fichier.read() 
         except FileNotFoundError:
             valeur = 0
